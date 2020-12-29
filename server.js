@@ -1,14 +1,14 @@
 'use strict'
 
 const express = require('express');
-// const cors = require('cors');
+const cors = require('cors');
 // const superagent = require('superagent');
 const pg = require('pg');
 require('dotenv').config();
 
 const app = express();
 
-// app.use(cors());
+app.use(cors());
 
 const PORT = process.env.PORT || 3001;
 const client = new pg.Client(process.env.DATABASE_URL);
